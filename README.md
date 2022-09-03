@@ -1,1 +1,1 @@
-# Alkemy-Full-Stack-JS-Challenge-
+# Alkemy-Full-Stack-JS-Challenge
