@@ -1,12 +1,13 @@
-const {Router} = require('express');
-const {getFinances, createFinance, deleteFinance, updateFinance} = require( '../controllers/finance.controller.js');
+import  {Router} from 'express';
+import {deleteFinance, getFinances, postFinance, updateFinance} from '../controllers/finance.controller.js';
 
 const router = Router();
 
 
+router.get('/', getFinances);
+router.post('/finance', postFinance);
+router.put('/finance/:id', updateFinance);
+router.delete('/finance/:id', deleteFinance);
 
-router.get('/finance', getFinances);
-router.post('/finance', createFinance);
 
-
-module.exports = router;
+export default router;

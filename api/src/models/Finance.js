@@ -25,7 +25,7 @@ export const Finance = sequelize.define('finances' ,{
         defaultValue: true
     },
     date:{
-        type: DataTypes.DATEONLY,
+        type: DataTypes.STRING,
         allowNull: false
     }
 

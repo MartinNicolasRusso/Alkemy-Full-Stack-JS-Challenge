@@ -1,5 +1,6 @@
 import express from 'express';
 import { sequelize } from './database/db.js';
+import app from './app.js'
 
 const server = express();
 
@@ -15,7 +16,7 @@ server.use(express.urlencoded({extended: false}))
 async function main() {
     try {
         await sequelize.sync({force: false});
-      server.listen(PORT, () => {
+      app.listen(PORT, () => {
         console.log(`listening on port ${PORT}`)
       })
     }  
